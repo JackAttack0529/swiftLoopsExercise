@@ -37,3 +37,66 @@ let q5 = "You shoot the swordsman and win the fight. However, you are captured a
 let gameOver5 = "You looked at the Ark and melted like butter in a microwave! " + gameOver
 
 let win = "When the Ark opened the villains were literally melted! It was crazy, but thankfully you had your eyes closed and were not affected." + newLine + "CONGRATULATIONS! THE VILLAINS HAVE BEEN DEFEATED AND YOU HAVE WON!!!"
+
+//Displays the starting/welcome game message to the user
+print(start)
+
+// waits for the user to press return before continuing with the game
+// NOTE: setting the readline response to the response variable. However, the response variable is not used. This is only done to remove the warning
+let response = readLine()
+
+
+// displays the first question to the user
+print(q1)
+
+// Sets the value of the userInput variable to the user's entry
+// NOTE: readLine() accepts user input/response
+var userInput = readLine()
+print(userInput)
+
+//
+// 1ST IF ELSE Statement
+// NOTE: readLine() returns the value entered as a string which is why it is being compared to the string of "2" instead of the int of 2
+if (userInput == "2"){
+    print(q2)
+    // The value for the userInput variable is updated using the user's readLine response
+    userInput = readLine()
+} else {
+    print(gameOver)
+}
+
+// 2ND IF ELSE Statement
+    if (userInput == "1"){
+        print(q3)
+        userInput = readLine()
+        
+        // 3RD IF ELSE Statement
+        if (userInput == "1"){
+            print(q4)
+            userInput = readLine()
+            
+            // 4TH IF ELSE Statement
+            if (userInput == "2"){
+                print(q5)
+                userInput = readLine()
+                
+                // 5TH IF ELSE Statement
+                if (userInput == "1"){
+                    print(win)
+                }
+            } else {
+                print(gameOver4)
+            }
+            
+        } else {
+            print(gameOver3)
+        }
+        
+    } else {
+        print(gameOver2)
+    }
+    
+//} else {
+//    print(gameOver1)
+//}
+
